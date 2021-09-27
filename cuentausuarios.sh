@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #****************************************************************#
 #***** NOMBRE: ANTONIO CINTORA ROMERO                       *****#
 #***** PROGRAMA: CONTADOR DE USUARIOS                       *****#
