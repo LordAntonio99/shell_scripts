@@ -7,10 +7,16 @@
 #****************************************************************#
 
 clear
-NUMERO=0
-for  FICHERO in $(ls -l)
+
+for  FICHERO in $(ls)
 do
-    echo "El nombre de mi fichero: $FICHERO"
-    let NUMERO=NUMERO+1
+    if [ -d "$FICHERO" ]
+    then
+        echo "Tu nombre de directorio es: $FICHERO"
+    else
+        if [ -f "$FICHERO" ]
+        then
+            echo "Tu nombre de fichero es: $FICHERO"
+        fi
+    fi
 done
-    echo "$NUMERO"

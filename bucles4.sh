@@ -7,10 +7,13 @@
 #****************************************************************#
 
 clear
+
+USUARIOS=$(cut -d: -f1 /etc/passwd)
 NUMERO=0
-for  FICHERO in $(ls -l)
+
+for NOMBRE in $USUARIOS
 do
-    echo "El nombre de mi fichero: $FICHERO"
+    echo "$NOMBRE"
     let NUMERO=NUMERO+1
-done
-    echo "$NUMERO"
+done 
+    echo "Hay un total de $NUMERO usuarios."
