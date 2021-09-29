@@ -7,17 +7,12 @@
 #****************************************************************#
 
 clear
+#   for  VARIABLE in $(seq 1 1 1000)
+#   do
+#       echo "$VARIABLE - No insultaré al compañero"
+#   done
 
-read -p "Introduce tu edad: " RESPUESTA
-
-case $RESPUESTA in
-    [1-3])
-        echo "A infantil";;
-    [4-8]) 
-        echo "A primaria";;
-    9|1[0-9])
-        echo "A la eso";;
-    *)
-        echo "No se que dices";;
-esac
-
+for  VARIABLE in {1..1000}
+do
+    echo "$VARIABLE - No insultaré al compañero"
+done

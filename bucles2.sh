@@ -8,16 +8,7 @@
 
 clear
 
-read -p "Introduce tu edad: " RESPUESTA
-
-case $RESPUESTA in
-    [1-3])
-        echo "A infantil";;
-    [4-8]) 
-        echo "A primaria";;
-    9|1[0-9])
-        echo "A la eso";;
-    *)
-        echo "No se que dices";;
-esac
-
+for  FICHERO in $(ls)
+do
+    echo "El nombre de mi fichero: $FICHERO"
+done
