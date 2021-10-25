@@ -26,7 +26,7 @@ case $NUMPAR in
 			LONGITUD=$(expr length "$2")
 			while [ $2 -ge $INICIAL ]
 			do
-				LONGITUDACTUAL=1
+				LONGITUDACTUAL=$(expr length $INICIAL)
 				CEROS=""
 				while [ $LONGITUDACTUAL -lt  $LONGITUD ]
 				do
