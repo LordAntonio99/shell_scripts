@@ -23,18 +23,23 @@ case $NUMPAR in
 				let INICIAL=$INICIAL+$1
 			done
 		else
-			LONGITUD=$(expr length "$2")
-			while [ $2 -ge $INICIAL ]
+			CERO="0"
+			CEROS=""
+			ACTUAL=0
+			LONTOTAL=$(expr length $2)
+			while [ $ACTUAL -lt $2 ]
 			do
-				LONGITUDACTUAL=$(expr length $INICIAL)
-				CEROS=""
-				while [ $LONGITUDACTUAL -lt  $LONGITUD ]
+				ACTUAL=$[$ACTUAL+1]
+				LONGACT=$(expr length $ACTUAL)
+				NUMCEROS=$[$LONTOTAL-$LONGACT]
+
+				for VAR in $(seq 1 1 $NUMCEROS)
 				do
-					CEROS=0$CEROS
-					LONGITUDACTUAL=$(expr length $[$LONGITUDACTUAL+$CEROS]) 
+					CEROS=$CEROS$CERO
 				done
-				echo $CEROS$INICIAL
-				let INICIAL=$INICIAL+1
+				echo $CEROS$ACTUAL
+				CEROS=""
+
 			done
 		fi
 		;;
